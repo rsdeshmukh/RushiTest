@@ -15,17 +15,26 @@ public class NewTest {
 	WebDriver driver;
 
 	@Test
-	public void function() {
+	public void searchOnGoogle() {
 		driver.get("https://www.google.co.in");
 		driver.findElement(By.xpath("//input[@name='q']")).sendKeys("crmnext" + Keys.ENTER);
 		// driver.findElement(By.name("btnK")).click();
 		List<WebElement> lwe = driver.findElements(By.tagName("a"));
-		System.out.println("All links are:\n");
+		System.out.println("All links are:");
 		for (int i = 0; i < lwe.size(); i++) {
 			if (!lwe.get(i).getText().isEmpty()) {
-				System.out.println(i + ":" + lwe.get(i).getText() + "\n");
+				System.out.println(i + ":" + lwe.get(i).getText());
 			}
 		}
+	}
+
+	@Test
+	public void searchOnCRMNEXT() {
+		driver.get("http://my.crmnext.com");
+		driver.findElement(By.id("TxtName")).sendKeys("rushikesh.deshmukh@crmnext.in");
+		driver.findElement(By.id("TxtPassword")).sendKeys("Acid_008");
+		driver.findElement(By.xpath("//input[@type='submit' and @value='Login']")).click();
+		System.out.println("My Current URL: " + driver.getCurrentUrl());
 	}
 
 	@BeforeClass
@@ -35,4 +44,3 @@ public class NewTest {
 	}
 
 }
-
