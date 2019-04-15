@@ -19,6 +19,8 @@ public class Basics {
 		
 		System.out.println(driver.findElement(By.cssSelector("div#error.loginError")).getText());
 		
+		System.out.println("Hello");
+		
 		//driver.quit();
 	}
 
