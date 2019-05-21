@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Assignment7AutoCompleteDropDown {
+public class Assignment8WebTables {
 
 	public static void main(String[] args) throws InterruptedException {
 		try {
